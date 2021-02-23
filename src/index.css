@@ -1,13 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@200&display=swap');
+
+*{
+  padding: 0;
+  margin:0 ;
+  box-sizing: border-box;
+}
+/* #map {
+  background: #02044a;
+  padding: 3rem;
+} */
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn {
+  border: none;
+  padding: 10px 20px;
+  outline: none;
+  cursor: pointer;
+  margin: 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  transition: all ease .2s;
+  background: #007bff;
+  color: #fff;
+}
+
+.btn-primary {
+  background: #007bff;
+  border-radius: 99px;
+  font-weight: bold;
+  padding: 12px 40px;
+}
+
+.btn:hover {
+  background: #007bff;
+  color: #fff;
+  box-shadow: 0 12px 4px rgba(0,0,0.0.4);
+}
+
+.wrapper {
+  width: 75%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.title {
+  color: #FFFFFF;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.title-lg {
+  font-size: 84px;
+  font-weight: bold;
+}
+.title-md {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.title-sm {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Media Quaries */
+@media screen and (max-width:768px) {
+   .wrapper {
+    width: 90%;
+  }
+ 
+  .title-lg {
+    font-size: 50px;
+  }
+  .title-md {
+    font-size: 30px;
+  }
 }

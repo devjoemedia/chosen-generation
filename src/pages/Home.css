@@ -1,0 +1,167 @@
+.banner {
+  height: 80vh;
+  background: #444;
+}
+
+.banner__content {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/b2.jpg");
+  display: grid;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  place-items: center;
+  color: #f9fafa;
+  text-align: center;
+}
+
+/* Who we are section */
+.whoweare {
+  padding: 3rem 0;
+  background: #f8f9fa;
+}
+
+.whoweare__content {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.whoweare__content h1 {
+  font-size: 3rem;
+  color: #000;
+  font-weight: bold;
+}
+.whoweare__content p {
+  font-size: 1.1rem;
+}
+/* Pastors */
+.pastors {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.pastors h1 {
+  font-size: 2rem;
+  color: #444;
+  font-weight: 200;
+  margin-bottom: 2rem;
+}
+
+.pastors__content {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pastor {
+  padding-bottom: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.pastor img {
+  height: 250px;
+}
+.pastor__role,
+.pastor__name {
+  padding: 0rem 2rem;
+  font-size: 1.5rem;
+}
+/* Our vision */
+.vision,
+.mission {
+  padding: 5rem 0;
+  /* height: 350px; */
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: grid;
+  place-items: center;
+}
+.vision {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/p5.jpg");
+}
+.mission {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/hand.jpg");
+}
+.vision h1,
+.mission h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.vision p,
+.mission p {
+  font-size: 1.5rem;
+  width: 60%;
+  margin: auto;
+}
+/* span.qto {
+  font-size: 5rem;
+} */
+/* vidoe */
+#video {
+  padding: 3rem 0;
+}
+.video__content {
+  width: 55%;
+  height: 350px;
+  margin: auto;
+}
+
+#video iframe {
+  width: 100%;
+  height: 100%;
+}
+/* Contact info */
+.contactInfo {
+  background: #f8f9fa;
+  padding: 3rem 0;
+}
+
+.contactInfo__content p {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.contactInfo h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.contactInfo h4 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* Media Quaries */
+@media screen and (max-width: 768px) {
+  .whoweare__content {
+    width: 100%;
+  }
+  .video__content {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 425px){
+  .pastors__content {
+    grid-template-columns: 1fr;
+  }
+  .mission {
+    padding: 1rem;
+  }
+  .mission p {
+    width: 100%;
+  }
+  .video__content {
+    width: 90%;
+  }
+  
+}
+
+@media screen and (max-width: 375px){
+  .banner__content .title-lg {
+    font-size: 2.5rem;
+  }
+}

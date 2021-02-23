@@ -1,0 +1,53 @@
+.prayerRequest {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("../images/hand.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  padding-top: 4rem;
+}
+
+.prayerRequest__content {
+  width: 600px;
+  padding: 3rem;
+  color: #fff;
+  background: rgba(39, 38, 38,.9);
+}
+
+.prayerRequest__content h1 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.prayerRequest__content h1 i {
+  color: #007ffd;
+}
+.prayerRequest__content input, .prayerRequest__content textarea {
+  padding: 15px;
+  width: 100%;
+  outline: none;
+  border-radius: 7px;
+}
+.prayerRequest__content input {
+  margin-bottom: 20px;
+}
+.prayerRequest__content textarea {
+  background: #f9fafa;
+  border: none;
+}
+.prayerRequest__content .input-box {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 425px){
+  .prayerRequest__content {
+    width: 100%;
+    padding: 1rem;
+    height: 80vh;
+  }  
+  .prayerRequest{
+    height: 80vh;
+  }
+}

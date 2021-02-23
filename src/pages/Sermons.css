@@ -1,0 +1,84 @@
+.sermons {
+  padding: 6rem 0 3rem 0;
+  background: #f9fafa;
+}
+.sermons__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sermons__content--left {
+  flex: .7;
+}
+
+.sermons__content--right {
+  flex: .2;
+}
+
+.sermon {
+  padding: 20px 0;
+  display: flex;
+}
+.sermon h3 {
+  color: #333;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.sermon:not(:last-child) {
+  border-bottom: 1px solid lightgray;
+}
+
+.sermon__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px 0;
+}
+.sermon__info span {
+  margin-right: 20px;
+}
+
+.sermon__info i {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.sermon__info .authur,.sermon__info .date {
+  color: #333;
+  font-weight: 800;
+}
+
+.sermon__count {
+  margin-right: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  text-align: center;
+  background: #007bff;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.categories li:not(:last-child) {
+  padding: 10px 0;
+  border-bottom: 1px solid lightgray;
+}
+.categories li a {
+  color: #333;
+}
+
+/* Media Quaries */
+@media screen and (max-width:768px) {
+  .sermons .wrapper {
+    width: 90%;
+  }
+ 
+}
+
+
+@media screen and (max-width: 425px){
+  .sermons__content {
+    flex-direction: column;
+  }
+}
