@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 
 function Navbar() {
+  const [show, setShow] = useState(false);
+
+  const toggleNavMenu = () => {
+    setShow(!show);
+  };
+
+  useEffect(() => {
+    if (show) {
+      document.body.style.overflow = "hidden";
+    }else {
+      document.body.style.overflow = "scroll";
+      
+    }
+  }, [show]);
+
   return (
     <header>
       <nav className="navbar">
-        <a href="/" className="logo">
-          CGWC
-        </a>
-        <ul className="navbar__links">
+        <div className="logo">
+          <a href="/">CGWC</a>
+        </div>
+        <ul className={show ? "navbar__links active" : "navbar__links"}>
           <li>
             <a href="/" className="navbar__link">
               Home
@@ -39,8 +54,14 @@ function Navbar() {
               Contacts
             </a>
           </li>
+          <button className="btn btn-primary">Donate</button>
         </ul>
-        <button className="btn btn-primary">Donate</button>
+        <div className="menu-icon">
+          <i
+            className={show ? "fas fa-times" : "fas fa-bars"}
+            onClick={toggleNavMenu}
+          ></i>
+        </div>
       </nav>
     </header>
   );

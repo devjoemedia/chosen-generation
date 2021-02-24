@@ -82,7 +82,7 @@ function Contacts() {
             </form>
           </div>
         </div>
-        <div id="map"></div>
+        {/* <div id="map"></div> */}
       </div>
     </div>
   );

@@ -161,6 +161,9 @@
 }
 
 @media screen and (max-width: 375px){
+  .banner__content {
+    padding-top: 5rem;
+  }
   .banner__content .title-lg {
     font-size: 2.5rem;
   }

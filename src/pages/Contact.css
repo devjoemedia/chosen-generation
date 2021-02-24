@@ -85,9 +85,6 @@ i {
 
 /* Media Quaries */
 @media screen and (max-width:768px) {
-  .contacts {
-    height: 100vh;
-  }
   
   .contacts__content {
     flex-direction: column;
