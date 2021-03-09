@@ -1,0 +1,9 @@
+.dashboard__content {
+  padding-top: 5rem;
+  display: flex;
+}
+
+
+.dashboard__main {
+  padding: 30px 2rem;
+}

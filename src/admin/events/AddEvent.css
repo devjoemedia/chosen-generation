@@ -1,0 +1,10 @@
+.addEvents__content {
+  display: flex;
+  padding-top: 5rem;
+}
+
+.addEvents__main {
+  padding: 30px 2rem;
+  background: #f7fafc;
+  width: 100%;
+}

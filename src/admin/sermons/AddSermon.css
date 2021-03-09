@@ -1,0 +1,57 @@
+.addsermon {
+  padding: 6rem 0;
+
+}
+
+.addSermon__content {
+  padding-top: 5rem;
+  display: flex;
+}
+
+
+.addSermon__main {
+  padding: 30px 2rem;
+  background: #f7fafc;
+  width: 100%;
+}
+
+.formContainer {
+  width: 80%;
+  margin: auto;
+}
+.formContainer .title-md {
+  color: #071d53;
+}
+
+.inputCtn {
+  margin-bottom: 20px;
+}
+.inputCtn label {
+  padding-left: 20px;
+  font-weight: bold;
+  color: #071d53;
+  font-size: 1.3rem;
+}
+.inputField {
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 15px 25px;
+  border-radius: 5px;
+  background: #f9fafa;
+  color: #071d53;
+
+}
+
+/* .formContainer #sermon {
+  color: #071d53;
+  margin-top: 10px;
+  width: 100%;
+  min-height: 250px;
+  border: none;
+  outline: none;
+  padding: 20px;
+  border-radius: 5px;
+  background: #f9fafa;
+} */

@@ -1,0 +1,24 @@
+.allSermons__content {
+  padding-top: 5rem;
+  display: flex;
+}
+.allSermons__main {
+  padding: 30px 2rem;
+  background: #f7fafc;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
+table td {
+  background: #f7fafa;
+  padding: 10px;
+}
+thead {
+  margin: 0;
+  padding: 20px;
+  color: #fff;
+  background: #007dfafa;
+}
+

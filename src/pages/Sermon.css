@@ -1,0 +1,57 @@
+.sermon-single {
+  background: #f9fafa;
+}
+.sermon-single__header {
+  width: 100%;
+  height: 450px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/p5.jpg");
+  background-position: center ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sermon-single__content {
+
+  width: 900px;
+  margin-top: -200px;
+  background: #ffffff;
+  padding: 100px;
+  background: #fff;
+}
+.sermon-single__content li{
+  font-size: 1.2rem;
+}
+.sermon-single__content p {
+  line-height: 1.8;
+  margin: 1.4em 0;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.sermon-single__content .sub-title {
+  color: rgba(66, 59, 96, 1);
+}
+.sermon-single .wrapper {
+  padding: 3rem;
+  display: grid;
+  place-items: center;
+}
+
+/* Media Quaries */
+@media screen and (max-width:768px) {
+  .sermon-single .wrapper {
+    padding: 0;
+    width: 90%;
+  }
+  .sermon-single__content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px){
+  .sermon-single__content {
+    padding: 10px;
+  }
+}

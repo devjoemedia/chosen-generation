@@ -1,0 +1,11 @@
+.editEvents__content {
+  padding-top: 5rem;
+  display: flex;
+}
+
+
+.editEvents__main {
+  padding: 30px 2rem;
+  background: #f7fafc;
+  width: 100%;
+}

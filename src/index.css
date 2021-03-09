@@ -30,10 +30,8 @@ body {
 }
 
 .btn-primary {
-  background: #007bff;
-  border-radius: 99px;
-  font-weight: bold;
-  padding: 12px 40px;
+  padding: 8px 30px;
+  border-radius: 100px;
 }
 
 .btn:hover {
@@ -91,4 +89,47 @@ img {
   .title-md {
     font-size: 30px;
   }
+}
+
+/* e3ecfa */
+/* #071d53 */
+/* #063777 */
+/* f7fafc */
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 9px 3px rgba(50, 52, 64, 0.05);
+
+}
+
+.bg-teal {
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #e3ecfa;
+  background: #f7fafc;
+}
+
+.react-datepicker__input-container input{
+  border: none;
+  background: inherit;
+  font-size: 1.2rem;
+}
+.react-datepicker__input-container input:focus{
+  border: none;
+  outline: none;
+}
+.react-datepicker__input-container {
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 15px 25px;
+  border-radius: 5px;
+  background: #f9fafa;
+  color: #071d53;
+}
+.react-datepicker-wrapper {
+  width: 100%;
 }

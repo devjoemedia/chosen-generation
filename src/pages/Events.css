@@ -52,7 +52,10 @@
   .event__image {
     order: 2;
   }
-  .event__text,.event__image {
+  .event__text ,.event__image {
+    width: 100%;
+  }
+  .event__text p {
     width: 100%;
   }
 }

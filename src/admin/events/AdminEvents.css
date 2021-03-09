@@ -1,0 +1,34 @@
+.adminEvents__content {
+  display: flex;
+  padding-top: 5rem;
+}
+
+.adminEvents__main {
+  height: 100%;
+  /* align-self: start; */
+  padding: 30px 2rem;
+  background: #f7fafc;
+  width: 100%;
+  display: grid;
+  grid-gap: 40px;
+  /* grid-auto-rows: auto; */
+  grid-template-columns: repeat(3, 1fr);
+}
+.adminEvents__main .eventItem {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 9px 3px rgba(50, 52, 64, 0.05);
+  overflow: hidden;
+}
+.adminEvents__main .eventItem__body {
+  padding: 20px;
+}
+.adminEvents__main .eventItem__body p {
+  margin-bottom: 10px;
+}
+.adminEvents__main .eventItem__footer {
+  padding: 10px;
+  display:flex;
+  justify-content: space-between;
+}
+
