@@ -3,6 +3,7 @@ import "./Home.css";
 import p1 from "../images/p1.jpg";
 import p2 from "../images/p3.jpg";
 import p3 from "../images/p4.jpg";
+import Map from "../components/Map";
 
 function Home() {
   return (
@@ -104,7 +105,7 @@ function Home() {
       <section className="contactInfo">
         <div className="wrapper">
           <div className="contactInfo__content">
-            <div >
+            <div className="contactInfo__contentLeft">
               <h1>Contact Us</h1>
               <h4>Prampram, Ghana</h4>
               <p>Sunday Morning Classes: 9:30</p>
@@ -113,7 +114,7 @@ function Home() {
               <p>Email Us: worshipcenter@gmail.com</p>
               <p>Phone: +233 248 578 600 / +233 244 901 508</p>
             </div>
-            <div id="map"></div>
+              <Map />
           </div>
         </div>
       </section>

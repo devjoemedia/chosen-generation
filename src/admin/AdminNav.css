@@ -1,8 +1,9 @@
 .adminNav {
+  position: sticky;
   width: 100%;
   height: 80px;
   padding: 20px 2rem;
-  position: fixed;
+  top: 0;
   background: #fff;
   display: flex;
   z-index: 10;

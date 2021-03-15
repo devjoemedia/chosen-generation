@@ -5,6 +5,7 @@ header {
   position: fixed;
   background: #fff;
   box-shadow: 0 2px 9px 3px rgba(50, 52, 64, 0.05);
+  z-index: 999;
 }
 
 .navbar {

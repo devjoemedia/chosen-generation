@@ -1,0 +1,18 @@
+.prayerRequestSingle {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.prayerRequestSingle__content {
+  width: 100%;
+  margin-left: 300px;
+}
+.prayerRequestSingle__content a.btn {
+  padding: 6px 20px;
+  display: block;
+}
+
+
+.prayerRequestSingle__main {
+  padding: 30px 2rem;
+}

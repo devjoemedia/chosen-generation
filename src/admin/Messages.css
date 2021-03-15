@@ -1,0 +1,18 @@
+.messages {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.messages__content {
+  width: 100%;
+  margin-left: 300px;
+}
+.messages__content a.btn {
+  padding: 6px 20px;
+  display: block;
+}
+
+
+.messages__main {
+  padding: 30px 2rem;
+}

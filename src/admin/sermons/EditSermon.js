@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { CKEditor } from "ckeditor4-react";
+import CKEditor from "ckeditor4-react";
 import AdminNav from "../AdminNav";
 import SideBar from "../SideBar";
+import "./EditSermon.css";
 
 function EditSermon() {
-  const [title, setTitle] = useState()
-  const [category, setCategory] = useState()
-  const [sermon, setSermon] = useState('')
+  const [title, setTitle] = useState();
+  const [category, setCategory] = useState();
+  const [sermon, setSermon] = useState("");
 
- useEffect(() => {
-   console.log(sermon,title, category);
-   
- }, [sermon,title, category])
- 
+  useEffect(() => {
+    console.log(sermon, title, category);
+  }, [sermon, title, category]);
+
   return (
-    <div className="addSermon">
-      <AdminNav />
-      <div className="addSermon__content">
-        <SideBar title="Edit Sermon" />
-        <div className="addSermon__main">
+    <div className="editSermon">
+      <SideBar title="Edit Sermon" />
+      <div className="editSermon__content">
+        <AdminNav />
+        <div className="editSermon__main">
           <div className="formContainer">
             <div className="card">
               <h3 className="title-md">Edit Sermon</h3>
@@ -44,14 +44,11 @@ function EditSermon() {
               </div>
               <div className="inputCtn bg-teal ">
                 <label htmlFor="sermon">Sermon</label>
-                {/* <CKEditor
-                  data={sermon}
-                  onChange={(e) => setSermon(e.editor.getData())}
+                <CKEditor
+                  data=""
+                  // onChange={(e) => setSermon(e.editor.getData())}
                   name="sermon"
-                  style={{
-                    marginTop: "10px",
-                  }}
-                /> */}
+                />
                 {/* <textarea name="sermon" id="sermon"></textarea> */}
               </div>
               <div className="inputCtn">

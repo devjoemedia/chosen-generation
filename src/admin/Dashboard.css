@@ -1,6 +1,11 @@
-.dashboard__content {
-  padding-top: 5rem;
+.dashboard {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.dashboard__content {
+  width: 100%;
+  margin-left: 300px;
 }
 
 

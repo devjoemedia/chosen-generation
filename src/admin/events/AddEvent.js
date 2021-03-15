@@ -11,9 +11,9 @@ function AddEvent() {
 
   return (
     <div className="addEvents">
-      <AdminNav />
+      <SideBar title="Add Event" />
       <div className="addEvents__content">
-        <SideBar title="Add Event" />
+        <AdminNav />
         <div className="addEvents__main">
           <div className="formContainer">
             <div className="card">

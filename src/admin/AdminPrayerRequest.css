@@ -1,0 +1,17 @@
+.adminPrayerRequest {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.adminPrayerRequest__content {
+  width: 100%;
+  margin-left: 300px;
+}
+.adminPrayerRequest__content a.btn {
+  padding: 6px 20px;
+  display: block;
+}
+
+.adminPrayerRequest__main {
+  padding: 30px 2rem;
+}

@@ -1,17 +1,12 @@
 .adminEvents__content {
-  display: flex;
-  padding-top: 5rem;
+  margin-left: 300px;
+  background: #f7fafc;
 }
 
 .adminEvents__main {
-  height: 100%;
-  /* align-self: start; */
   padding: 30px 2rem;
-  background: #f7fafc;
-  width: 100%;
   display: grid;
   grid-gap: 40px;
-  /* grid-auto-rows: auto; */
   grid-template-columns: repeat(3, 1fr);
 }
 .adminEvents__main .eventItem {

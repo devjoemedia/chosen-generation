@@ -5,16 +5,25 @@
   margin:0 ;
   box-sizing: border-box;
 }
-/* #map {
-  background: #02044a;
-  padding: 3rem;
-} */
+
 
 body {
   font-family: 'Public Sans', sans-serif;
   font-weight: 300;
   line-height: 1.6;
 }
+a {
+  padding: 0;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
 
 .btn {
   border: none;
@@ -45,16 +54,6 @@ body {
   margin: auto;
 }
 
-a {
-  text-decoration: none;
-}
-li {
-  list-style: none;
-}
-
-img {
-  width: 100%;
-}
 
 .title {
   color: #FFFFFF;

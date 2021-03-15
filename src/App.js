@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Events from "./pages/Events";
 import PrayerRequest from "./pages/PrayerRequest";
+import AdminPrayerRequest from "./admin/AdminPrayerRequest";
 import Contacts from "./pages/Contacts";
 import Sermon from "./pages/Sermon";
 import Dashboard from "./admin/Dashboard";
@@ -16,6 +17,9 @@ import EditSermon from "./admin/sermons/EditSermon";
 import AddEvent from "./admin/events/AddEvent";
 import EditEvent from "./admin/events/EditEvent";
 import AdminEvents from "./admin/events/AdminEvents";
+import Messages from "./admin/Messages";
+import PrayerRequestSingle from "./admin/PrayerRequestSingle";
+import MessageSingle from "./admin/MessageSingle";
 
 function App() {
   return (
@@ -69,6 +73,18 @@ function App() {
           </Route>
           <Route path="/admin/sermons">
             <AllSermons />
+          </Route>
+          <Route path="/admin/prayer-request/1">
+            <PrayerRequestSingle />
+          </Route>
+          <Route path="/admin/prayer-request">
+            <AdminPrayerRequest />
+          </Route>
+          <Route path="/admin/messages/1">
+            <MessageSingle />
+          </Route>
+          <Route path="/admin/messages">
+            <Messages />
           </Route>
           <Route path="/admin">
             <Dashboard />

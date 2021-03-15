@@ -70,7 +70,6 @@
 .vision,
 .mission {
   padding: 5rem 0;
-  /* height: 350px; */
   text-align: center;
   color: #fff;
   background-size: cover;
@@ -98,9 +97,6 @@
   width: 60%;
   margin: auto;
 }
-/* span.qto {
-  font-size: 5rem;
-} */
 /* vidoe */
 #video {
   padding: 3rem 0;
@@ -119,6 +115,13 @@
 .contactInfo {
   background: #f8f9fa;
   padding: 3rem 0;
+}
+.contactInfo__content {
+  display: flex;
+  justify-content: center;
+}
+.contactInfo__contentLeft {
+  flex: .4;
 }
 
 .contactInfo__content p {
@@ -157,7 +160,9 @@
   .video__content {
     width: 90%;
   }
-  
+  .contactInfo__content {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 375px){

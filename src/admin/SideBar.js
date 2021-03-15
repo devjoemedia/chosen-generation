@@ -3,7 +3,7 @@ import './SideBar.css'
 
 function SideBar({title}) {
   return (
-    <div className="sidebar">
+    <aside className="sidebar">
       <div className="sidebar__header">
         <h2>{title}</h2>
       </div>
@@ -21,7 +21,7 @@ function SideBar({title}) {
       <div className="sidebar__footer">
         <h3>&copy;cgwc 2021</h3>
       </div>
-    </div>
+    </aside>
   )
 }
 

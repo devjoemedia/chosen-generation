@@ -1,17 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
+import Map from "../components/Map";
 import "./Contact.css";
 
 function Contacts() {
-  // useEffect(() => {
-  //   let map;
-  //   function initMap() {
-  //     map = new google.maps.Map(document.getElementById("map"), {
-  //       center: { lat: -34.397, lng: 150.644 },
-  //       zoom: 8,
-  //     });
-  //   }
-    
-  // }, [])
   return (
     <div className="contacts">
       <div className="wrapper">
@@ -82,7 +73,9 @@ function Contacts() {
             </form>
           </div>
         </div>
-        {/* <div id="map"></div> */}
+      </div>
+      <div id="map">
+        <Map />
       </div>
     </div>
   );

@@ -11,9 +11,9 @@ function EditEvent() {
 
   return (
     <div className="editEvents">
-      <AdminNav />
-      <div className="editEvents__content">
         <SideBar title="Edit Event" />
+      <div className="editEvents__content">
+      <AdminNav />
         <div className="editEvents__main">
           <div className="formContainer">
             <div className="card">

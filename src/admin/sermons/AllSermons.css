@@ -1,11 +1,13 @@
 .allSermons__content {
-  padding-top: 5rem;
-  display: flex;
+  margin-left: 300px;
+  background: #f7fafc;
 }
 .allSermons__main {
   padding: 30px 2rem;
-  background: #f7fafc;
-  width: 100%;
+}
+.allSermons__content a.btn {
+  padding: 6px 20px;
+  display: block;
 }
 
 table {
