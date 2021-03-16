@@ -65,7 +65,7 @@ function App() {
           <Route path="/admin/events">
             <AdminEvents />
           </Route>
-          <Route path="/admin/sermons/1/edit">
+          <Route path="/admin/sermons/:id/edit">
             <EditSermon />
           </Route>
           <Route path="/admin/sermons/add">

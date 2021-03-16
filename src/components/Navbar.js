@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
@@ -7,13 +8,14 @@ function Navbar() {
   const toggleNavMenu = () => {
     setShow(!show);
   };
-
+  const removeMenu = () => {
+    setShow(false);
+  };
   useEffect(() => {
     if (show) {
       document.body.style.overflow = "hidden";
-    }else {
+    } else {
       document.body.style.overflow = "scroll";
-      
     }
   }, [show]);
 
@@ -21,38 +23,52 @@ function Navbar() {
     <header>
       <nav className="navbar">
         <div className="logo">
-          <a href="/">CGWC</a>
+          <Link onClick={removeMenu} to="/">
+            CGWC
+          </Link>
         </div>
         <ul className={show ? "navbar__links active" : "navbar__links"}>
           <li>
-            <a href="/" className="navbar__link">
+            <Link onClick={removeMenu} to="/" className="navbar__link">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/about" className="navbar__link">
+            <Link onClick={removeMenu} to="/about" className="navbar__link">
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/sermons" className="navbar__link">
+            <Link
+              onClick={removeMenu}
+              to="/sermons"
+              className="navbar__link"
+            >
               Sermons
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/events" className="navbar__link">
+            <Link onClick={removeMenu} to="/events" className="navbar__link">
               Events
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/prayer-request" className="navbar__link">
+            <Link
+              onClick={toggleNavMenu}
+              to="/prayer-request"
+              className="navbar__link"
+            >
               Prayer Request
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/contacts" className="navbar__link">
+            <Link
+              onClick={toggleNavMenu}
+              to="/contacts"
+              className="navbar__link"
+            >
               Contacts
-            </a>
+            </Link>
           </li>
           <button className="btn btn-primary">Donate</button>
         </ul>

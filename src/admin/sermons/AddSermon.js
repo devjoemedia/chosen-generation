@@ -1,18 +1,48 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./AddSermon.css";
 import AdminNav from "../AdminNav";
 import SideBar from "../SideBar";
 import CKEditor from "ckeditor4-react";
+import axios from "../../axios";
 
 function AddSermon() {
-  const [title, setTitle] = useState();
-  const [category, setCategory] = useState();
+  const [title, setTitle] = useState("");
+  const [category, setCategory] = useState("");
   const [sermon, setSermon] = useState("");
 
-  useEffect(() => {
-    console.log(sermon, title, category);
-  }, [sermon, title, category]);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (title === "" || title.length < 6) {
+      console.log("Please title must above 6 charcters");
+      return;
+    }
+    if (category === "" || category.length < 6) {
+      console.log("Please category must above 6 charcters");
+      return;
+    }
+    if (sermon === "" || sermon.length < 10) {
+      console.log("Please enter a valid sermon");
+      return;
+    }
 
+    try {
+      const postData = await axios({
+        method: "POST",
+        url: "/sermons",
+        data: {
+          title,
+          author: '6027bfa6b3c5023b5cf9d448',
+          category,
+          body: sermon,
+        },
+      });
+      if (postData) {
+        window.location = "/admin/sermons";
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
     <div className="addSermon">
       <SideBar title="Add Sermon" />
@@ -55,7 +85,7 @@ function AddSermon() {
                 {/* <textarea name="sermon" id="sermon"></textarea> */}
               </div>
               <div className="inputCtn">
-                <button type="submit" className="btn">
+                <button onClick={handleSubmit} className="btn">
                   Publish
                 </button>
               </div>

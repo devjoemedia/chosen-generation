@@ -1,20 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Sermon.css";
+import axios from "../axios";
+import { useParams } from "react-router";
+import parse from 'html-react-parser';
 
 function Sermon() {
+  const [sermon, setSermon] = useState([]);
+  const { id } = useParams();
+  console.log(id);
+  useEffect(() => {
+    async function fetchData() {
+      const { data } = await axios.get("/sermons/" + id);
+      setSermon(data.data);
+      return data;
+    }
+    fetchData();
+  }, [id]);
+
   return (
     <div className="sermon-single">
       <div className="sermon-single__header"></div>
       <div className="wrapper">
         <div className="sermon-single__content">
-          <h1 className="title-md">Sermon </h1>
+          <h1 className="title-md">{sermon.title} </h1>
           <p>
-            Chosen Generation Worship Center (CGWC) was established in the year
+            {parse(`${sermon.body}`)}
+            {/* Chosen Generation Worship Center (CGWC) was established in the year
             2012 during Easther Convention on Sunday 8th April 2012 at Tema
             Community 2. Chosen Generation Worship Center (CGWC) was founded by
-            Apostle Maxwell Ninson through a revelation from God.
+            Apostle Maxwell Ninson through a revelation from God. */}
           </p>
-          <p>
+          {/* <p>
             Chosen Generation Worship Center (CGWC) is a word base church "My
             God is not a poor God" your Attitude determines your alltitude. it
             is more risky not to take a risk, I am a possibilitarian
@@ -27,7 +43,7 @@ function Sermon() {
             visit us at Our Prampram branch (Prampram Water Works Accra Ghana -
             West Africa) or email us at worshipcenter@gmail.com or Call us on
             +233 248 578 600/+233 244 901 508
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

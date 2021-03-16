@@ -1,8 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import Map from "../components/Map";
 import "./Contact.css";
+import axios from "../axios";
 
 function Contacts() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState();
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let regex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+    if (name === "" || name.length < 6) {
+      console.log("Please name must above 6 charcters");
+      return;
+    }
+    if (message === "" || message.length < 6) {
+      console.log("Please message must above 6 charcters");
+      return;
+    }
+    if (!regex.exec(phone)) {
+      console.log("Please enter a valid phone number");
+      return;
+    }
+    console.log(name, phone, message);
+
+    try {
+      const postData = await axios({
+        method: "POST",
+        url: "/messages",
+        data: {
+          name,
+          phone: phone * 1,
+          message,
+        },
+      });
+      if (postData) {
+        window.location = "/";
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="contacts">
       <div className="wrapper">
@@ -53,11 +93,22 @@ function Contacts() {
             <form action="/">
               <div className="input-box">
                 <label htmlFor="name">Name</label>
-                <input type="text" name="name" placeholder="enter name..." />
+                <input
+                  type="text"
+                  onChange={(e) => setName(e.target.value)}
+                  name="name"
+                  placeholder="enter name..."
+                />
               </div>
               <div className="input-box">
                 <label htmlFor="phone">Phone</label>
-                <input type="text" name="phone" placeholder="enter phone..." />
+
+                <input
+                  type="text"
+                  onChange={(e) => setPhone(e.target.value)}
+                  name="phone"
+                  placeholder="enter phone..."
+                />
               </div>
               <div className="input-box">
                 <label htmlFor="prayer">Message</label>
@@ -66,10 +117,13 @@ function Contacts() {
                   id="prayer"
                   cols="30"
                   rows="10"
+                  onChange={(e) => setMessage(e.target.value)}
                   placeholder="enter a message..."
                 ></textarea>
               </div>
-              <button className="btn btn-primary">Send</button>
+              <button onClick={handleSubmit} className="btn btn-primary">
+                Send
+              </button>
             </form>
           </div>
         </div>

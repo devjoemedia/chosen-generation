@@ -17,10 +17,10 @@ function Events() {
                 Sunday Worship and empowerment service with Apostel Maxwell Ninson.
               </p>
               <div >
-                Host: <i class="fas fa-user"></i> Maxwell Ninson
+                Host: <i className="fas fa-user"></i> Maxwell Ninson
               </div>
               <span >
-                <i class="far fa-calendar-alt"></i>25 july, 2018
+                <i className="far fa-calendar-alt"></i>25 july, 2018
               </span>
               <span>Time: 8:00AM-10:30AM</span>
             </div>
@@ -38,10 +38,10 @@ function Events() {
                 Sunday Worship and empowerment service with Apostel Maxwell Ninson.
               </p>
               <div >
-                Host: <i class="fas fa-user"></i> Maxwell Ninson
+                Host: <i className="fas fa-user"></i> Maxwell Ninson
               </div>
               <span >
-                <i class="far fa-calendar-alt"></i>25 july, 2018
+                <i className="far fa-calendar-alt"></i>25 july, 2018
               </span>
               <span>Time: 8:00AM-10:30AM</span>
             </div>
@@ -53,10 +53,10 @@ function Events() {
                 Sunday Worship and empowerment service with Praise Choir.
               </p>
               <div >
-                Host: <i class="fas fa-user"></i> Maxwell Ninson
+                Host: <i className="fas fa-user"></i> Maxwell Ninson
               </div>
               <span >
-                <i class="far fa-calendar-alt"></i>25 july, 2018
+                <i className="far fa-calendar-alt"></i>25 july, 2018
               </span>
               <span>Time: 8:00AM-10:30AM</span>
             </div>
