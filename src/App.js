@@ -74,13 +74,13 @@ function App() {
           <Route path="/admin/sermons">
             <AllSermons />
           </Route>
-          <Route path="/admin/prayer-request/1">
+          <Route path="/admin/prayer-request/:id">
             <PrayerRequestSingle />
           </Route>
           <Route path="/admin/prayer-request">
             <AdminPrayerRequest />
           </Route>
-          <Route path="/admin/messages/1">
+          <Route path="/admin/messages/:id">
             <MessageSingle />
           </Route>
           <Route path="/admin/messages">

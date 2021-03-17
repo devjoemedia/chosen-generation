@@ -20,7 +20,6 @@ function AllSermons() {
   }, [sermons]);
 
   const handleDelete = async(id)=> {
-    console.log(id);
     const data = await axios({
       method: 'DELETE',
       url: `/sermons/${id}`,
@@ -29,6 +28,7 @@ function AllSermons() {
       window.location = '/admin/sermons'
     }
   }
+  
   return (
     <div className="allSermons">
       <SideBar title="Sermons" />

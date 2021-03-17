@@ -9,7 +9,7 @@
 }
 .adminPrayerRequest__content a.btn {
   padding: 6px 20px;
-  display: block;
+  display: inline-block;
 }
 
 .adminPrayerRequest__main {

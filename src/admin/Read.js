@@ -3,7 +3,7 @@ import AdminNav from "./AdminNav";
 import SideBar from "./SideBar";
 import "./Read.css";
 
-function Read({ from }) {
+function Read({ from, prayerData, messageData }) {
   return (
     <div className="read">
       <SideBar
@@ -24,18 +24,19 @@ function Read({ from }) {
                 {from === "prayer-request"
                   ? "Prayer Request"
                   : from === "messages"
-                  ? "Message Info"
+                  ? "Message "
                   : ""}{" "}
               </h1>
               <p>
-                From: <span>Jane Doe</span>
+                From: <span>{prayerData ? prayerData.name : messageData ? messageData.name : ''}</span>
               </p>
               <p>
-                Phone: <span>+223 555 555 555</span>
+                Phone: <span>{prayerData ? prayerData.phone : messageData ? messageData.phone : ''}</span>
               </p>
             </div>
             <div className="read__info">
-              <p>
+              <p>{prayerData ? prayerData.message : messageData ? messageData.message : ''}</p>
+              {/* <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Assumenda vitae inventore veniam aliquid eius, quam non,
                 accusantium molestiae quis veritatis sunt deserunt accusamus
@@ -52,7 +53,7 @@ function Read({ from }) {
                 optio consequatur corporis similique dolorum magni? Officiis
                 illo vitae tenetur perferendis odio dolore praesentium veniam.
                 Quaerat omnis architecto odio!
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

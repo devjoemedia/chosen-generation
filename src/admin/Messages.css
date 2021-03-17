@@ -9,7 +9,7 @@
 }
 .messages__content a.btn {
   padding: 6px 20px;
-  display: block;
+  display: inline-block;
 }
 
 

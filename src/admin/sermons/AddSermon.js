@@ -9,9 +9,11 @@ function AddSermon() {
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
   const [sermon, setSermon] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     if (title === "" || title.length < 6) {
       console.log("Please title must above 6 charcters");
       return;
@@ -31,13 +33,14 @@ function AddSermon() {
         url: "/sermons",
         data: {
           title,
-          author: '6027bfa6b3c5023b5cf9d448',
+          author: "6027bfa6b3c5023b5cf9d448",
           category,
           body: sermon,
         },
       });
       if (postData) {
         window.location = "/admin/sermons";
+        setLoading(false);
       }
     } catch (err) {
       console.log(err);
@@ -85,9 +88,15 @@ function AddSermon() {
                 {/* <textarea name="sermon" id="sermon"></textarea> */}
               </div>
               <div className="inputCtn">
-                <button onClick={handleSubmit} className="btn">
-                  Publish
-                </button>
+                {loading ? (
+                  <button disabled onClick={handleSubmit} className="btn">
+                    Publish
+                  </button>
+                ) : (
+                  <button onClick={handleSubmit} className="btn">
+                    Publish
+                  </button>
+                )}
               </div>
             </div>
           </div>

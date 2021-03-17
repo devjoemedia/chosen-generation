@@ -19,9 +19,10 @@
   padding: 20px 0;
   display: flex;
 }
-.sermon h3 {
+.sermon__title {
   color: #333;
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: bold;
   text-transform: uppercase;
 }
 .sermon:not(:last-child) {

@@ -27,7 +27,7 @@ function Sermons() {
                   <div className="sermon__count">0{index + 1}</div>
                 </div>
                 <div className="sermon__content">
-                  <a href={`/sermons/${sermon._id}`}>{sermon.title}</a>
+                  <a className="sermon__title"href={`/sermons/${sermon._id}`}>{sermon.title}</a>
                   <div className="sermon__info">
                     <span className="authur">
                       <i className="fas fa-user"></i>Maxwell Ninson
